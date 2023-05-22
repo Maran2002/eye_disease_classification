@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eye Disease Classification - Result</title>
+    <style>
+        body {
+            background-image: url('static/b1.jpg');
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .company-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+            margin-top: 0;
+        }
+
+        .result-image {
+            max-width: 400px;
+            margin-top: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .result-disease {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="company-name">M.S Eye Clinic</h1>
+        <img src="{{ url_for('static', filename=image_path) }}" alt="Input Image" class="result-image">
+        <h2 class="result-disease">Predicted Disease: {{ predicted_disease }}</h2>
+    </div>
+</body>
+</html>
